@@ -1,5 +1,7 @@
 package com.example.demo.model;
 
+import java.sql.Date;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,8 +23,8 @@ public class Veicolo {
   @GeneratedValue(strategy = GenerationType.IDENTITY)  
   private int id;
 
-  @Column(name = "targa", nullable = false)
-  private String targa;
+  @Column(name = "name", nullable = false)
+  private String name;
 
   @Column(name = "latitude", nullable = false)
   private double latitude;
@@ -30,10 +32,30 @@ public class Veicolo {
   @Column(name = "longitude", nullable = false)
   private double longitude;
   
-  @Column(name = "status", nullable = false)
-  private String status;
+  @Column(name = "timestamp", nullable = false)
+  private Date timestamp;
+
+  @Column(name = "heading", nullable = false)
+  private double heading;
+
+  @Column(name = "altitude", nullable = false)
+  private double altitude;
+
+  @Column(name = "description", nullable = false)
+  private String description;
+
+  @Column(name = "plate", nullable = false)
+  private String plate;
+
+  @Column(name = "fuel_tank", nullable = false)
+  private double fuelTank;
+
+  @Column(name = "speed", nullable = false)
+  private double speed;
 
   @Column(name = "driver_id", nullable = false)
-  private int driverId;  
+  private int driverId;
 
+  @Column(name = "status", nullable = false)
+  private String status;
 }

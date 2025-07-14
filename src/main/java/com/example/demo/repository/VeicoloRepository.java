@@ -11,7 +11,6 @@ import com.example.demo.model.Veicolo;
 @Repository
 public interface VeicoloRepository extends JpaRepository<Veicolo, Integer> {
     
-    Veicolo findByTarga(String targa);
     List<Veicolo> findByStatus(String status);
     List<Veicolo> findByLatitudeAndLongitude(double latitude, double longitude);
     List<Veicolo> findByStatusAndLatitudeAndLongitude(String status, double latitude, double longitude);      
